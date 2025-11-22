@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sumit Kumar — AI Student & Developer</title>
+  <meta name="description" content="Sumit Kumar — AI student building small projects in Python, web development and automation. Portfolio showcasing projects and contact." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Sumit Kumar</h1>
+        <p class="tag">AI Student • Python • Web Development</p>
+      </div>
+      <nav class="nav">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn-outline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <h2>Hello — I'm Sumit</h2>
+            <p class="lead">
+              AI student focused on practical machine learning and web development. I build small projects to learn and solve real problems. Fast learner and eager to contribute to innovative teams.
+            </p>
+            <div class="cta-row">
+              <a class="btn-primary" href="#projects">View Projects</a>
+              <a class="btn-ghost" href="mailto:your-email@example.com">Email Me</a>
+            </div>
+            <ul class="quick-info">
+              <li><strong>Location:</strong> Dubai, UAE</li>
+              <li><strong>Looking for:</strong> Internship / Junior Developer role</li>
+            </ul>
+          </div>
+          <div class="profile-card">
+            <div class="profile-avatar">SK</div>
+            <h3>Sumit Kumar</h3>
+            <p class="muted">AI Student | Aspiring ML Engineer</p>
+            <div class="profile-links">
+              <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Selected Projects</h2>
+        <p class="section-sub">Small, practical projects that show learning and deliverables.</p>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Portfolio Website</h3>
+            <p>Responsive personal portfolio built with HTML & CSS. (This repo)</p>
+            <div class="card-meta">
+              <span>HTML / CSS</span>
+              <a href="https://github.com/YOUR_USERNAME/portfolio-website" target="_blank">View repo</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Python To-Do App</h3>
+            <p>Command-line to-do app to demonstrate Python basics and data handling.</p>
+            <div class="card-meta">
+              <span>Python</span>
+              <a href="https://github.com/YOUR_USERNAME/python-todo-app" target="_blank">View repo</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Simple AI Chatbot</h3>
+            <p>Rule-based chatbot in Python demonstrating conversational logic and responses.</p>
+            <div class="card-meta">
+              <span>Python • AI basics</span>
+              <a href="https://github.com/YOUR_USERNAME/simple-ai-chatbot" target="_blank">View repo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill">
+            <h4>Languages</h4>
+            <p>Python • JavaScript • HTML • CSS</p>
+          </div>
+          <div class="skill">
+            <h4>AI & ML</h4>
+            <p>Basics: NLP, rule-based bots, model experimentation</p>
+          </div>
+          <div class="skill">
+            <h4>Tools</h4>
+            <p>Git • GitHub • VS Code • Basic CLI</p>
+          </div>
+          <div class="skill">
+            <h4>Learning</h4>
+            <p>Fast at learning frameworks, open to mentorship</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p>I am currently studying AI and working on small development projects to build practical skills. I enjoy solving problems with code and learning by building. I am looking for an internship to contribute, learn, and grow within a product-driven team.</p>
+
+        <ul class="about-list">
+          <li><strong>Education:</strong> HND in Digital Technology & AI (in progress)</li>
+          <li><strong>Availability:</strong> Immediate / Part-time internship</li>
+          <li><strong>Language:</strong> English, Hindi</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-sub">Send me a message — I reply fast.</p>
+
+        <form id="contactForm" class="contact-form" onsubmit="return onContactSubmit(event)">
+          <label>
+            <span>Name</span>
+            <input type="text" id="name" placeholder="Your name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" id="email" placeholder="your-email@example.com" required />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea id="message" placeholder="Write a short message" rows="4" required></textarea>
+          </label>
+          <div class="form-actions">
+            <button class="btn-primary" type="submit">Send Message</button>
+            <button class="btn-ghost" type="button" onclick="fillForFounder()">Use message for founder</button>
+          </div>
+        </form>
+
+        <div id="formResult" class="form-result" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Sumit Kumar — AI Student. GitHub: <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener">YOUR_USERNAME</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
