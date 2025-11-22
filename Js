@@ -1,0 +1,34 @@
+// small interactions: contact handler + helper
+document.getElementById('year').textContent = new Date().getFullYear();
+
+function onContactSubmit(e){
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  if(!name || !email || !message){
+    showResult('Please fill all fields.', true);
+    return false;
+  }
+
+  // This is a demo form — replace with email API or GitHub Issues / Formspree if needed.
+  showResult('Thanks! Your message looks great. (This demo does not send emails.)', false);
+  document.getElementById('contactForm').reset();
+  return false;
+}
+
+function showResult(msg, isError){
+  const el = document.getElementById('formResult');
+  el.textContent = msg;
+  el.style.color = isError ? 'crimson' : '#0b6b1a';
+  setTimeout(()=> el.textContent = '', 6000);
+}
+
+// Fill contact form quickly with a message you can send to founder
+function fillForFounder(){
+  document.getElementById('name').value = 'Sumit Kumar';
+  document.getElementById('email').value = 'your-email@example.com';
+  document.getElementById('message').value = "Hi — I'm an AI student and developer looking for an internship. I have built small projects (portfolio website, Python to-do app, simple chatbot). I learn fast and I’m excited to contribute to Muni-App's product. Thank you for considering me.";
+  showResult('Form filled — update email then press Send Message.', false);
+}
